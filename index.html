@@ -14,8 +14,6 @@
   <div>
     <pre id="head"></pre>
   </div>
-  <!-- <pre><button id="home">Home</button> | <button id="shawndrost">shawndrost</button> | <button id="sharksforcheap">sharksforcheap</button> | <button>mracus</button> | <button>douglascalhoun</button> | <span id="newTweets"></span></pre>
-  </div> -->
 
   <div id="main"></div>
   <script>
@@ -36,15 +34,10 @@
         $("#head").append(userButtons[i]);
       }
 
-      // $("#head").append(" | ");
-      // $("#head").append($("<span id='newTweets'>No New Tweets</span>"));
 
       // var $body = $('body');
       var $body = $("#main");
       $body.html('');
-
-      let mode = { "user": "home" }; // home is the default 'user'
-      // if it is to display a particular user only, then set the mode to that particular user
 
       const displayHome = function () {
         $body.html('');
@@ -162,118 +155,7 @@
         $tweet.prependTo($body); // displays the newest at the top
       };
 
-
-      // var index = streams.home.length - 1;
-      // while (index >= 0) {
-      //   var tweet = streams.home[index];
-      //   var $tweet = $('<div class="tweet"></div>');
-
-      //   let $userName = $(`<span class="userName"><a href="#" onclick="userClicked(this)" class="userLink">@${tweet.user}</a> · </span>`);
-      //   $userName.appendTo($tweet);
-
-      //   let $timestamp = $(`<small class='timestamp'>${tweet.created_at.toString()}</small>`);
-      //   $timestamp.appendTo($tweet);
-
-
-      //   // use string.indexOf to find octothorpe #
-      //   // check if unique or multiple
-      //   // then use that index, and string.slice, to find what the hashtag is
-      //   // then make it its own thing, in a span called tags, with a blue/link color
-
-
-      //   let $message = $(`<br><br><span class="message">${tweet.message}</span>`);
-      //   $message.appendTo($tweet);
-
-      //   $tweet.appendTo($body);
-      //   index -= 1;
-      // }
-
       displayHome();
-
-      // setInterval ?every 5 seconds?
-      // update the tweets list (add any new tweets)
-      // update the timeStamp (for a human readable format)
-      //
-
-
-      // a.push = function(x){
-      //   console.log('added: ',x,', length changed: ',(this.length+1));
-      //   this[this.length]=x
-      // }
-
-      // streams.home.push = function (x) {
-      //   this[this.length] = x
-
-      //   // if (mode.user === 'home') {
-      //   //   presentTweet(x);
-      //   // }
-      //   // displayHome();
-      // }
-
-      // shawndrost = [];
-      // streams.users.sharksforcheap = [];
-      // streams.users.mracus = [];
-      // streams.users.douglascalhoun = [];
-      // window.users = Object.keys(streams.users);
-
-      // for (let user in users) {
-      //   user.push = function (tweet) {
-      //     this[this.length] = tweet;
-
-      //     // console.log("mu:", mode.user, "   | u:", user);
-
-      //     // if (mode.user === user) {
-      //     //   presentTweet(tweet);
-      //     // }
-
-      //   }
-      // }
-
-      // $(streams.home).change(function () {
-      //   displayHome();
-      //   console.log("asdfasdfaasdf");
-      // });
-
-      // generateRandomTweet()
-      // setInterval(generateRandomTweet(), 1500);
-      // const intervalID = setInterval(function () { generateRandomTweet(); console.log(streams.home.length) }, 10000);
-      // const intervalID = setInterval(generateRandomTweet, 3000);
-
-
-
-      // const addTweetIntervalID = setInterval(generateRandomTweet, 5000);
-
-      // const addTweetIntervalID = setInterval(function () {
-      //   var tweet = {};
-      //   tweet.user = randomElement(users);
-
-      //   $(`#${tweet.user}`).css("background-color", "orange");
-
-      //   tweet.message = randomMessage();
-      //   tweet.created_at = new Date();
-      //   addTweet(tweet);
-
-      //   // generateRandomTweet();
-      //   // $(`#${newUser}`).css("background-color", "orange");
-      //   $("#home").css("background-color", "orange");
-      // }, 3000);
-
-      // const updateDisplayIntervalID = setInterval(function () {
-      //   console.log(streams.home.length);
-      // }, 2000);
-
-
-
-      // const updateDisplayIntervalID = setInterval(function () {
-      //   const mu = mode.user;
-      //   console.log("updating", mu);
-      //   if (mu === 'home') {
-      //     displayHome();
-      //   } else {
-      //     displayUser(mu);
-      //   }
-      // }, 5000);
-
 
     });
   </script>
