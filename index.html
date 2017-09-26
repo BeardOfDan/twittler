@@ -118,11 +118,7 @@
       userClicked = function (el) {
         const thisUser = el.innerText.slice(1);
 
-        $body.empty();
-        displayUser(thisUser);
-
-        mode.user = thisUser;
-        console.log(mode.user);
+        $(`#${thisUser}`).trigger("click");
       };
 
       const hashTagClicked = function (el) {
