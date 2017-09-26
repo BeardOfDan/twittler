@@ -56,7 +56,7 @@ for (var i = 0; i < 10; i++) {
 // is infinitely recursive
 var scheduleNextTweet = function () {
   generateRandomTweet();
-  setTimeout(scheduleNextTweet, Math.random() * 1500 + 2000);
+  setTimeout(scheduleNextTweet, Math.random() * 1500 + 1000);
 };
 scheduleNextTweet();
 
