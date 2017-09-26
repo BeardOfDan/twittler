@@ -1,0 +1,33 @@
+
+.tweet {
+  margin: 10px 5px;
+  padding: 20px;
+  /* background-color: #f5f8fa; */
+  background-color: #efefff;
+}
+
+.tweet:nth-child(even) {
+  background-color: #efffef;
+}
+
+.userName {
+  font-size: 20px;
+}
+
+.userLink {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.userLink:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.message {
+  font-size: 28px;
+}
+
+.hashTag {
+  font-size: 28px;
+}
